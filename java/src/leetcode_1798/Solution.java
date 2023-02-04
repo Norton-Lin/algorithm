@@ -1,5 +1,7 @@
 package leetcode_1798;
 
+import java.util.Arrays;
+
 class Solution {
     //连续值一定从0开始
 	//dp 截止第i位，可以组成多少连续的数
