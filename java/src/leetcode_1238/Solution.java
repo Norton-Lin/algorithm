@@ -5,10 +5,8 @@ import java.util.List;
 
 class Solution {
     //返回0-2^(n-1)的排列
+	//回溯，排列树
     public List<Integer> circularPermutation(int n, int start) {
-        int index = 1;
-        int len = (int)Math.pow(2,n);
-        int num = 1;
         List<Integer> ans = new ArrayList<Integer>();
         ans.add(start);
         start = backtrack(1<<(n-1), start, ans);
