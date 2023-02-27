@@ -2,7 +2,6 @@ package leetcode_1145;
 
 import java.util.ArrayDeque;
 import java.util.Queue;
-import java.util.concurrent.ArrayBlockingQueue;
 
 class TreeNode {
     int val;
