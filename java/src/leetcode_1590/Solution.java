@@ -5,6 +5,7 @@ class Solution {
     //删除一个、两个
     //记录以第i位为结尾、子数组和
     //没有什么是暴力dp不能解决的×
+	//这里说错了，他也是个前缀和不算dp
     /** 
     public int minSubarray(int[] nums, int p) {
         long[] dp = new long[nums.length];
