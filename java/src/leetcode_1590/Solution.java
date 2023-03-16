@@ -1,5 +1,8 @@
 package leetcode_1590;
 
+import java.util.HashMap;
+import java.util.Map;
+
 class Solution {
     //子数组，连续
     //删除一个、两个
