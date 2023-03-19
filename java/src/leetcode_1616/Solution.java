@@ -7,21 +7,21 @@ class Solution {
     //当a,b都不是回文
     //当a头部和b尾部匹配
     //当b头部和a尾部匹配
-    //eg abcd efbbba -> 翻转 abbbfe -> 截取 abbb ab和ab相同 检查 bb是否回文
+	//时间复杂度 O(n)
     public boolean checkPalindromeFormation(String a, String b) {
     	if(isPalindrome(a)||isPalindrome(b))
     		return true;
         int len = a.length();
         int index = 0;
-        for(index = 0 ;index<len;++index)//记录a头部和b尾部匹配长度
+        for(index = 0 ;index<len;++index)//记录a头部和b尾部匹配长度 O(n)
             if(a.charAt(index)!=b.charAt(len-index-1))
                 break;
-        if(index>=len/2||isPalindrome(b.substring(index, len-index-1)))
+        if(index>=len/2||isPalindrome(b.substring(index, len-index))||isPalindrome(a.substring(index, len-index)))
         	return true;
-        for(index = 0;index<len;++index)
+        for(index = 0;index<len;++index)//记录b头部和a尾部匹配长度 O(n)
         	if(b.charAt(index)!=a.charAt(len-index-1))
                 break;
-        if(index>=len/2||isPalindrome(a.substring(index, len-index-1)))
+        if(index>=len/2||isPalindrome(b.substring(index, len-index))||isPalindrome(a.substring(index, len-index)))
         	return true;
     	return false;
     }
@@ -33,10 +33,4 @@ class Solution {
     			return false;
     	return true;
     }
-    public static void main(String args[]) {
-    	Solution solution = new Solution();
-    	boolean ans = solution.checkPalindromeFormation("abda", "acmc");
-    	System.out.print(ans);
-		
-	}
 }
