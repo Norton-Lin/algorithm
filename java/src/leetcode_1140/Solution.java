@@ -1,8 +1,5 @@
 package leetcode_1140;
 
-import java.util.HashMap;
-import java.util.Map;
-
 class Solution {
     //每个人可拿 X = 1-2M堆
     // M = max(M,X)
