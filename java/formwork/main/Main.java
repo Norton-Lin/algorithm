@@ -1,4 +1,5 @@
 package main;
+import java.math.BigInteger;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
@@ -8,7 +9,8 @@ import java.util.Scanner;
 public class Main {
 	public static void main(String args[]) {
 		Scanner in = new Scanner(System.in);
-		System.out.println(in.nextInt());
+		System.out.println(gcd(3, 10));
+		BigInteger numBigInteger = new BigInteger("2353252525523532");
 		in.close();
 	}
 	/**
@@ -17,7 +19,7 @@ public class Main {
 	 * @param b 小数
 	 * @return 最大公因数
 	 */
-	public int gcd(int a,int b) {
+	public static int gcd(int a,int b) {
 		return b == 0?a:gcd(b, a%b);
 	}
 	/**
@@ -108,7 +110,27 @@ public class Main {
 			power>>=1;
 			base = base*base%1000;
 		}
+		(x*y-(x/mod*y)*mod+mod)%mod;    
 		return ans;
+	}
+	/**
+	 * 欧拉函数，返回<n的所有与n互质的数
+	 * @param n
+	 * @return
+	 */
+	public long phi(long n) {
+		long res = n,a = n;
+		for(int i = 2;i*i<=n;++i)
+		{
+			while(a%i==0)
+			{
+				res = res/a*(a-1);
+				a /= i;
+			}
+		}
+		if(a>1)
+			res = res/a*(a-1);
+		return res;
 	}
 	//因式分解，不含因子1的分解
 	public int Factorization(int n)

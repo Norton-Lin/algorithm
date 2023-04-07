@@ -1,5 +1,7 @@
 package leetcode_1040;
 
+import java.util.Arrays;
+
 class Solution {
     //只移动端点石子
     //使端点石子不再是端点
