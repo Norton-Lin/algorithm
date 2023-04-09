@@ -1,5 +1,9 @@
 package leetcode_1125;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
 class Solution {
     public int[] smallestSufficientTeam(String[] req_skills, List<List<String>> people) {
         int n = req_skills.length, m = people.size();
