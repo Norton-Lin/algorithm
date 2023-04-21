@@ -97,6 +97,7 @@ public class Solution {
 		{
 			map[edges[i][0]][edges[i][1]] = true;
 		}
+		return 0;
 		
     }
 	public static void main(String args[]) {

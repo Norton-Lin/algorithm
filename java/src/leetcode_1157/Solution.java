@@ -1,11 +1,8 @@
 package leetcode_1157;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-
-import test_340.Map;
-import test_340.Solution.Node;
-import test_340.Solution.SegmentTree;
 /*
 class MajorityChecker {
 
@@ -102,7 +99,7 @@ class SegmentTree {
 
 class MajorityChecker {
     private SegmentTree tree;
-    private Map<Integer, List<Integer>> d = new HashMap<>();
+    private java.util.Map<Integer, List<Integer>> d = new HashMap<>();
 
     public MajorityChecker(int[] arr) {
         tree = new SegmentTree(arr);
