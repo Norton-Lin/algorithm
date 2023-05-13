@@ -4,7 +4,8 @@ class Solution {
     //k必须是个以1,3,7,9结尾的奇数
 	//直接计算会爆
 	//k反推n长度
-	public int smallestRepunitDivByK(int k) {
+	public int smallestRepunitDivByK(int k) 
+	{
         int bit = k%10;//末位
         if(bit%2==0||bit%5==0)
             return -1;
@@ -42,5 +43,4 @@ class Solution {
         }
     	return ans;
     }*/
-	 */
 }
