@@ -133,10 +133,11 @@ public class Solution {
 			{
 				while(!cur.isEmpty())
 				{
-					cur.re
+					cur.remove(0);
 				}
 			}
 		}
+		return 0;
 		
     }
 	public static void main(String args[]) {
