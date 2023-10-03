@@ -23,7 +23,10 @@ class Solution {
     // 利润 = 卖出 - 买入
     public int maxProfit(int[] prices){
         int res = 0;
-
+        for(int i = 0;i<prices.length;++i){
+            res = res<prices[i] - prices[0] ? prices[i] - prices[0] : res;
+            prices[0] = prices[0]>prices[i] ? prices[i] : prices[0];
+        }
         return res;
     }
     public static void main(String[] args){

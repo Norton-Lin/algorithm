@@ -6,10 +6,14 @@ class Solution {
     //可以在同一天买卖同一支股票
     public int maxProfit(int[] prices) {
         int res = 0;
-        int cur = 0;
+        int cur = prices[0];
         for(int i = 0;i<prices.length;++i)
         {
-            if()
+            if(cur<=prices[i])//当前价高于买入价
+            {
+                res += prices[i] - cur; //卖出，获得利润
+            }
+            cur = prices[i];
         }
         return res;
     }
