@@ -1,5 +1,4 @@
 package main;
-import java.math.BigInteger;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
@@ -9,8 +8,8 @@ import java.util.Scanner;
 public class Main {
 	public static void main(String args[]) {
 		Scanner in = new Scanner(System.in);
-		System.out.println(gcd(3, 10));
-		BigInteger numBigInteger = new BigInteger("2353252525523532");
+		System.out.println(phi(10));
+		//BigInteger numBigInteger = new BigInteger("2353252525523532");
 		in.close();
 	}
 	/**
@@ -110,7 +109,7 @@ public class Main {
 			power>>=1;
 			base = base*base%1000;
 		}
-		(x*y-(x/mod*y)*mod+mod)%mod;    
+		//(x*y-(x/mod*y)*mod+mod)%mod;    
 		return ans;
 	}
 	/**
@@ -118,7 +117,7 @@ public class Main {
 	 * @param n
 	 * @return
 	 */
-	public long phi(long n) {
+	public static long phi(long n) {
 		long res = n,a = n;
 		for(int i = 2;i*i<=n;++i)
 		{
@@ -174,6 +173,7 @@ public class Main {
 		is_prime[0]=1;
 		is_prime[1]=1;
 		for(int i=2;i<1001;i++) {
+			//是质数
 			if(is_prime[i]==0) {      
 				prime[count]=i;
 				count++;
