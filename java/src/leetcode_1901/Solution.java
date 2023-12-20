@@ -20,6 +20,7 @@ class Solution {
                     maxElement = mat[i][k];
                 }
             }
+            //查看是否符合条件
             if (i - 1 >= 0 && mat[i][j] < mat[i - 1][j]) {
                 high = i - 1;
                 continue;
