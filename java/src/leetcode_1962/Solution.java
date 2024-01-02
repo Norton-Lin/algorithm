@@ -3,7 +3,7 @@
  *
  * [1962] 移除石子使总数最小
  */
-
+package leetcode_1962;
 // @lc code=start
 
 import java.util.PriorityQueue;

@@ -1,6 +1,5 @@
 package leetcode_2395;
 
-import java.util.Arrays;
 import java.util.HashSet;
 
 class Solution {

@@ -22,6 +22,7 @@ class Solution {
     	int b = in.nextInt();
     	int ans = solution.gcd(a, b);
     	System.out.print(ans);
+		in.close();
 		
 	}
 }

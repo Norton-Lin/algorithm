@@ -3,7 +3,7 @@
  *
  * [53] 最大子数组和
  */
-
+package leetcode_53;
 // @lc code=start
 class Solution {
     public int maxSubArray(int[] nums) {

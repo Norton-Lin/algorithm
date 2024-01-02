@@ -3,7 +3,7 @@
  *
  * [2586] 统计范围内的元音字符串数
  */
-
+package leetcode_2586;
 // @lc code=start
 
 import java.util.HashSet;

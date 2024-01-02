@@ -3,7 +3,7 @@
  *
  * [162] 寻找峰值
  */
-
+package leetcode_162;
 // @lc code=start
 class Solution {
     //找到一个峰值索引，复杂度O(log n)
@@ -15,7 +15,6 @@ class Solution {
     public int findPeakElement(int[] nums) {
         int left = 0,right = nums.length-1;
         int mid = (right+left)/2;
-        int ans = -1;
         while(left<=right){
             mid = (right+left)/2;
             if(compare(nums, mid-1, mid))//nums[i-1]>nums[i]

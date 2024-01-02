@@ -3,7 +3,7 @@
  *
  * [1094] 拼车
  */
-
+package leetcode_1094;
 // @lc code=start
 class Solution {
     //一次遍历，模拟

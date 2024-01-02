@@ -3,7 +3,7 @@
  *
  * [746] 使用最小花费爬楼梯
  */
-
+package leetcode_746;
 // @lc code=start
 class Solution {
     //每次爬一到两个台阶

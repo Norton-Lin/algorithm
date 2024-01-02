@@ -1,6 +1,5 @@
 package leetcode_2106;
 
-import java.util.Arrays;
 
 class Solution {
     //最多走k步，拿数量最多的水果

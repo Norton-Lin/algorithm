@@ -3,7 +3,7 @@
  *
  * [2003] 每棵子树内缺失的最小基因值
  */
-
+package leetcode_2003;
 // @lc code=start
 
 import java.util.ArrayList;

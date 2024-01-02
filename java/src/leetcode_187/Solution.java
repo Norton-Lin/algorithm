@@ -3,7 +3,7 @@
  *
  * [187] 重复的DNA序列
  */
-
+package leetcode_187;
 // @lc code=start
 
 import java.util.ArrayList;

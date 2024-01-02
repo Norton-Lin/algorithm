@@ -1,5 +1,4 @@
 package leetcode_1032;
-import java.util.Hashtable;
 
 class Trie {
     Trie[] children = new Trie[26];

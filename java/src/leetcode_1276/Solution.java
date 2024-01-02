@@ -3,7 +3,7 @@
  *
  * [1276] 不浪费原料的汉堡制作方案
  */
-
+package leetcode_1276;
 import java.util.ArrayList;
 import java.util.List;
 // @lc code=start

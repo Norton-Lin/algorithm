@@ -3,6 +3,10 @@
  *
  * [2646] 最小化旅行的价格总和
  */
+package leetcode_2646;
+
+import java.util.ArrayList;
+import java.util.List;
 
 // @lc code=start
 class Solution {

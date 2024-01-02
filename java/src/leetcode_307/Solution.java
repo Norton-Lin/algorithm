@@ -3,10 +3,9 @@
  *
  * [307] 区域和检索 - 数组可修改
  */
-
+package leetcode_307;
 // @lc code=start
 
-//package leetcode_307;
 
 class NumArray {
     private int[] nums;

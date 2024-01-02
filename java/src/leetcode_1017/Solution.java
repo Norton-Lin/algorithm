@@ -57,7 +57,6 @@ class Solution {
 
     }
     public static String base2(int n) {
-        int len = 1;
         StringBuilder res = new StringBuilder();
         while(n>0)
         {

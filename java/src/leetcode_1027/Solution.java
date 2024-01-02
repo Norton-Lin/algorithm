@@ -1,7 +1,6 @@
 package leetcode_1027;
 
 import java.util.Arrays;
-import java.util.HashMap;
 
 class Solution {
     //找最长的等差子序列 序列元素可以不相邻，但要有序
@@ -52,7 +51,7 @@ class Solution {
     	return ans;
     }
     public static void main(String args[]) {
-		Solution solution = new Solution();
-		int ans = solution.longestArithSeqLength(new int[] {20,1,15,3,10,5,8});
+		//Solution solution = new Solution();
+		//int ans = solution.longestArithSeqLength(new int[] {20,1,15,3,10,5,8});
 	}
 }

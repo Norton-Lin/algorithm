@@ -3,7 +3,7 @@
  *
  * [2300] 咒语和药水的成功对数
  */
-
+package leetcode_2300;
 // @lc code=start
 
 import java.util.Arrays;

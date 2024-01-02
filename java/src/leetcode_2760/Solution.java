@@ -3,7 +3,7 @@
  *
  * [2760] 最长奇偶子数组
  */
-//package leetcode_2760;
+package leetcode_2760;
 // @lc code=start
 class Solution {
     // dp

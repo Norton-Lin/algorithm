@@ -3,7 +3,7 @@
  *
  * [2656] K 个元素的最大和
  */
-
+package leetcode_2656;
 // @lc code=start
 class Solution {
     //O(n) 找最大值就行

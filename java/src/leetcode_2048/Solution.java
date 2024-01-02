@@ -3,7 +3,7 @@
  *
  * [2048] 下一个更大的数值平衡数
  */
-
+package leetcode_2048;
 // @lc code=start
 class Solution {
     public int nextBeautifulNumber(int n) {

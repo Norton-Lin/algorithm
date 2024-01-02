@@ -1,13 +1,12 @@
 package leetcode_1010;
 
 import java.util.HashMap;
-import java.util.HashSet;
 
 class Solution {
 	//哈希记录 O(n) O(n)
     public int numPairsDivisibleBy60(int[] time) {
         long ans = 0;
-        int cur = 0,num = 0;
+        int cur = 0;
         HashMap<Integer,Integer> map = new HashMap<>();
         for(int i:time)
         {

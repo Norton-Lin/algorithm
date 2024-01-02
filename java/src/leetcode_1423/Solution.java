@@ -3,7 +3,7 @@
  *
  * [1423] 可获得的最大点数
  */
-
+package leetcode_1423;
 // @lc code=start
 class Solution {
     //拿k张牌，可以从头尾交替拿，不可从中间抽取

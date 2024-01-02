@@ -3,6 +3,10 @@
  *
  * [421] 数组中两个数的最大异或值
  */
+package leetcode_421;
+
+import java.util.HashSet;
+import java.util.Set;
 
 // @lc code=start
 class Solution {

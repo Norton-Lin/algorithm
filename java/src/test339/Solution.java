@@ -3,11 +3,9 @@ package test339;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
-import java.util.Hashtable;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
-import java.util.Scanner;
 
 public class Solution {
 	//子串0在1前，且0数量同1
@@ -16,9 +14,6 @@ public class Solution {
 	//else
 	public int findTheLongestBalancedSubstring(String s) {
 		int ans = 0;
-		int cur = 0;
-		int count = 0;//
-		boolean judge = false;
 		int[] dp1 = new int[s.length()+1];//第i位，前方连续的0
 		int[] dp2 = new int[s.length()+1];//第i为，后方连续的1
 		for(int i = 1;i<=s.length();++i)
@@ -125,7 +120,6 @@ public class Solution {
 			if(ans[cur] == -1)
 				continue;
 			int left = 0,right = n-1;//左右端
-			int count1 = k/2,count2 = k/2;//左右翻转次数
 			if(p+1>=k)
 				left = p - k + 1;
 			if(n-p>=k)
@@ -153,8 +147,8 @@ public class Solution {
 		return ans;
     }
 	public static void main(String args[]) {
-		Scanner inScanner = new Scanner(System.in);
-		Solution solution = new Solution();
-		int[] ans = solution.minReverseOperations(4,0,new int[] {1,2},4);
+		//Scanner inScanner = new Scanner(System.in);
+		//Solution solution = new Solution();
+		//int[] ans = solution.minReverseOperations(4,0,new int[] {1,2},4);
 	}
 }

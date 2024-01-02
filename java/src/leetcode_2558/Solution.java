@@ -6,8 +6,6 @@ package leetcode_2558;
  */
 
 // @lc code=start
-
-import java.util.Arrays;
 import java.util.PriorityQueue;
 
 class Solution {

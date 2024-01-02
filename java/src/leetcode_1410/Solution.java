@@ -3,7 +3,7 @@
  *
  * [1410] HTML 实体解析器
  */
-
+package leetcode_1410;
 // @lc code=start
 class Solution {
     public String entityParser(String text) {

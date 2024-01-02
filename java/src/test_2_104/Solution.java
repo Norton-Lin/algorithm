@@ -1,7 +1,6 @@
 package test_2_104;
 
 import java.util.Arrays;
-import java.util.BitSet;
 
 public class Solution {
 	public int countSeniors(String[] details) {

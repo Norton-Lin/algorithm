@@ -3,7 +3,7 @@
  *
  * [1954] 收集足够苹果的最小花园周长
  */
-
+package leetcode_1954;
 // @lc code=start
 class Solution {
     //买下土地是正方形

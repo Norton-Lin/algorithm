@@ -3,7 +3,7 @@
  *
  * [2477] 到达首都的最少油耗
  */
-
+package leetcode_2477;
 // @lc code=start
 
 import java.util.ArrayList;

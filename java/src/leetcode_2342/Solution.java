@@ -9,7 +9,6 @@ package leetcode_2342;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.PriorityQueue;
 
 class Solution {
     // 最大堆

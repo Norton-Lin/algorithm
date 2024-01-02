@@ -1,7 +1,6 @@
 package leetcode_2352;
 
 import java.util.Arrays;
-import java.util.HashMap;
 
 class Solution {
 	/**

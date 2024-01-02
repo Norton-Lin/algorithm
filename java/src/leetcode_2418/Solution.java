@@ -36,5 +36,6 @@ class Solution {
     public static void main(String args[]) {
 		Solution solution = new Solution();
 		String ans[] = solution.sortPeople(new String[] {"Mary","John","Emma"}, new int[] {180,165,170});
+        System.out.println(ans);
 	}
 }

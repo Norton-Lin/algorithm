@@ -3,7 +3,7 @@
  *
  * [2661] 找出叠涂元素
  */
-
+package leetcode_2661;
 // @lc code=start
 class Solution {
     //某一行或列完全上色时，返回当前arr下标

@@ -4,7 +4,6 @@ import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Deque;
 import java.util.List;
-import java.util.Stack;
 
 class ListNode {
      int val;
@@ -98,13 +97,13 @@ class Solution {
         return ans;
     }
     public static void main(String agrs[]) {
-    	Solution s = new Solution();
-    	ListNode s1 = new ListNode(5);
-    	ListNode s2 = new ListNode(3,s1);
-    	ListNode s3 = new ListNode(4,s2);
-    	ListNode s4 = new ListNode(7,s3);
-    	ListNode s5 = new ListNode(2,s4);
-    	int[] arr = s.nextLargerNodes(s5);
+    	//Solution s = new Solution();
+    	//ListNode s1 = new ListNode(5);
+    	//ListNode s2 = new ListNode(3,s1);
+    	//ListNode s3 = new ListNode(4,s2);
+    	//ListNode s4 = new ListNode(7,s3);
+    	//ListNode s5 = new ListNode(2,s4);
+    	//int[] arr = s.nextLargerNodes(s5);
 		
 	}
 }

@@ -3,7 +3,7 @@
  *
  * [1466] 重新规划路线
  */
-
+package leetcode_1466;
 // @lc code=start
 
 import java.util.Arrays;

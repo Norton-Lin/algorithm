@@ -44,6 +44,6 @@ class Solution {
     public static void main(String args[]) {
     	Solution s = new Solution();
     	String ans = s.oddString(new String[] {"adc","wzy","abc"});
-		
+		System.out.println(ans);
 	}
 }

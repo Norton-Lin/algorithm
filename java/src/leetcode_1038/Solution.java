@@ -3,7 +3,7 @@
  *
  * [1038] 从二叉搜索树到更大和树
  */
-
+package leetcode_1038;
 // @lc code=start
 /**
  * Definition for a binary tree node.

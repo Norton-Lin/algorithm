@@ -43,10 +43,11 @@ public class Solution {
 			arr[i] =scanner.nextInt();
 			sum^=arr[i];
 		}
+		scanner.close();
 		if(sum == 0)
 			return 0;
 		Arrays.sort(arr);
-		
+
 		
 		return 0;
 	}

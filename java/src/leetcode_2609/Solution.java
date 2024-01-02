@@ -3,7 +3,7 @@
  *
  * [2609] 最长平衡子字符串
  */
-
+package leetcode_2609;
 // @lc code=start
 class Solution {
     //0都在1之前 且 01数量相同

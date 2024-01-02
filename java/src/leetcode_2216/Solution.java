@@ -3,7 +3,7 @@
  *
  * [2216] 美化数组的最少删除数
  */
-
+package leetcode_2216;
 // @lc code=start
 class Solution {
     public int minDeletion(int[] nums) {
