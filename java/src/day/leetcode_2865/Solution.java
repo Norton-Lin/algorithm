@@ -3,7 +3,7 @@
  *
  * [2865] 美丽塔 I
  */
-package leetcode_2865;
+package day.leetcode_2865;
 import java.util.*;
 // @lc code=start
 class Solution {
