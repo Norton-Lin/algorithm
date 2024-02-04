@@ -3,7 +3,7 @@
  *
  * [2808] 使循环数组所有元素相等的最少秒数
  */
-package leetcode_2808;
+package day.leetcode_2808;
 
 import java.util.ArrayList;
 import java.util.HashMap;
