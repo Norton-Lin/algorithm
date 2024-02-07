@@ -1,4 +1,4 @@
-package leetcode_lcp_33;
+package day.leetcode_lcp_33;
 
 import java.util.Arrays;
 
