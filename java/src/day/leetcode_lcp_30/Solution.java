@@ -1,4 +1,4 @@
-package leetcode_lcp_30;
+package day.leetcode_lcp_30;
 
 import java.util.PriorityQueue;
 
