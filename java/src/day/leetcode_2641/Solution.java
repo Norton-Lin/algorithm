@@ -1,10 +1,10 @@
+package day.leetcode_2641;
+
 /*
  * @lc app=leetcode.cn id=2641 lang=java
  *
  * [2641] 二叉树的堂兄弟节点 II
  */
-
-import java.util.Queue;
 import java.util.ArrayList;
 import java.util.Deque;
 import java.util.LinkedList;
@@ -52,6 +52,7 @@ class Solution {
                 sums.add(sum);
                 sum = 0;
                 num = next;//下一层节点数量
+                next = 0;
             }
             if(cur.left!=null){
                 queue.add(cur.left);

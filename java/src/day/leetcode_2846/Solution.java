@@ -1,3 +1,10 @@
+package day.leetcode_2846;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 /*
  * @lc app=leetcode.cn id=2846 lang=java
  *
