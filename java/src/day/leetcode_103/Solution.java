@@ -1,13 +1,17 @@
-package day.leetcode_107;
+package day.leetcode_103;
 /*
- * @lc app=leetcode.cn id=107 lang=java
+ * @lc app=leetcode.cn id=103 lang=java
  *
- * [107] 二叉树的层序遍历 II
+ * [103] 二叉树的锯齿形层序遍历
  */
+
 import java.util.ArrayDeque;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 import java.util.Queue;
+
 class TreeNode {
     int val;
     TreeNode left;
@@ -28,43 +32,35 @@ class TreeNode {
 }
 // @lc code=start
 class Solution {
-    public List<List<Integer>> levelOrderBottom(TreeNode root) {
-        List<List<Integer>> ans = new ArrayList<>();
+    public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
         if(root == null)
-            return ans;
+            return new ArrayList<>();
+        List<List<Integer>> ans = new ArrayList<>();
         Queue<TreeNode> queue = new ArrayDeque<>();
         List<Integer> row = new ArrayList<>();
-        queue.add(root);
         int count = 1;
         int next = 0;
+        queue.add(root);
         while(!queue.isEmpty()){
             --count;
             TreeNode cur = queue.poll();
+            row.add(cur.val);
             if(cur.left!=null){
-                queue.add(cur.left);
                 ++next;
+                queue.add(cur.left);
             }
             if(cur.right!=null){
-                queue.add(cur.right);
                 ++next;
+                queue.add(cur.right);
             }
-            row.add(cur.val);
             if(count == 0){
-                ans.add(row);
-                row = new ArrayList<>();
                 count = next;
                 next = 0;
-            }   
-        }
-        int right = ans.size() - 1;
-        int left = 0 ;
-        while(left<right){
-            List<Integer> i = ans.get(left);
-            List<Integer> j = ans.get(right);
-            ans.set(left,j);
-            ans.set(right, i);
-            ++left;
-            --right;
+                if(ans.size()%2==1)
+                    Collections.reverse(row);
+                ans.add(row);
+                row = new ArrayList<>();
+            }
         }
         return ans;
     }
