@@ -58,8 +58,10 @@ class Solution {
             long cur = 0;
             //找到质数点
             for(int j:list[i]){
+                //找和该质数点直接相连的合数点
                 if(!is_prime[j])
                     continue;
+                //合数点没有被计算过子树数量
                 if(count[j] == 0){
                     seen.clear();
                     dfs(list, seen,j,0);
@@ -68,13 +70,16 @@ class Solution {
                         count[k] = cnt;
                     }
                 }
+                //子树相乘
                 ans += count[j] * cur;
                 cur += count[j];
             }
+            //仅达质数节点
             ans += cur;
         }
         return ans;
     }
+    //连通分量内，不经过质数有多少路径
     public void dfs(List<Integer>[] list, List<Integer> seen, int i, int pre){
         seen.add(i);
         for(int j:list[i]){
