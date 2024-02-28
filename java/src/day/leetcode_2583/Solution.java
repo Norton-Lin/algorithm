@@ -3,13 +3,11 @@
  *
  * [2583] 二叉树中的第 K 大层和
  */
-
+package day.leetcode_2583;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
-import java.util.PriorityQueue;
 import java.util.Queue;
 
 class TreeNode {
@@ -63,7 +61,8 @@ class Solution {
         }
         if(sum.size()<k)
             return -1;
-         
+        sum.sort(Comparator.reverseOrder());
+        return sum.get(k-1);
     }
 }
 // @lc code=end

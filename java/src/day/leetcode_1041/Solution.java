@@ -61,9 +61,4 @@ class Solution {
     		return true;
     	return false;
     }
-    public static void main(String args[]) {
-    	Solution solution = new Solution();
-    	boolean ans= solution.isRobotBounded("GLRLLGLL");
-		
-	}
 }
