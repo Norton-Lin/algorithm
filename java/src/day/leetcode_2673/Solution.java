@@ -15,7 +15,7 @@ class Solution {
     int ans = 0;
 
     public int minIncrements(int n, int[] cost) {
-        int value = dfs(n, 1, cost, 0);
+        dfs(n, 1, cost, 0);
         return ans;
     }
 
