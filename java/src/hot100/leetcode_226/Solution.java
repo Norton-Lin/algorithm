@@ -1,3 +1,4 @@
+package hot100.leetcode_226;
 /*
  * @lc app=leetcode.cn id=226 lang=java
  *
