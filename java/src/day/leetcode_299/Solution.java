@@ -1,3 +1,4 @@
+package day.leetcode_299;
 /*
  * @lc app=leetcode.cn id=299 lang=java
  *
