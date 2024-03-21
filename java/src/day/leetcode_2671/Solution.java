@@ -34,7 +34,7 @@ class FrequencyTracker {
         fre.put(num + 1, fre.get(num+1) - 1);
     }
     public boolean hasFrequency(int frequency) {
-        return fre.getOrDefault(frequency, 0) == 0;
+        return fre.getOrDefault(frequency, 0) != 0;
     }
 }
 
