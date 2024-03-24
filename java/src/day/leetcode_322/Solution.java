@@ -6,8 +6,6 @@ package day.leetcode_322;
  */
 
 import java.util.Arrays;
-import java.util.Comparator;
-
 // @lc code=start
 class Solution {
     //01背包
@@ -29,11 +27,6 @@ class Solution {
             
         }
         return record[amount]?dp[amount]:-1;
-    }
-    }
-    public static void main(String[] args) {
-        Solution s = new Solution();
-        s.coinChange(new int[]{1,2,5}, 11);
     }
     //超时
     /**
