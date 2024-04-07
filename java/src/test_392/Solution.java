@@ -103,7 +103,7 @@ public class Solution {
         }
         for(int i = 0;i<query.length;++i){
             if(record[query[i][0]] == record[query[i][1]])
-                ans[i] = list.get(query[i][0]);
+                ans[i] = list.get(record[query[i][0]]);
             else
                 ans[i] = -1;
         }
@@ -115,9 +115,9 @@ public class Solution {
             if(map[index][i]!=-1){//有路径
                 if(record[i]==-1){//不在连通图中
                     record[i] = num;
-                    ans = Math.min(map[index][i],ans);
+                    ans = Math.min(map[index][i],ans&map[index][i],);
                     int res = dfs(i,map,record,num,n);
-                    ans = Math.min(res,ans);
+                    ans = Math.min(res,ans&ans);
                 }
             } 
         }
@@ -125,6 +125,6 @@ public class Solution {
     }
     public static void main(String[] args) {
         Solution s = new Solution();
-        s.minimumCost(3,new int[][]{{0,2,7},{0,1,15},{1,2,6},{1,2,1}},new int[][]{{1,2}});
+        s.minimumCost(3,new int[][]{{1,0,4},{0,2,5},{0,2,3},{0,2,14},{0,2,12},{2,0,14},{0,2,4}},new int[][]{{2,1}});
     }
 }
