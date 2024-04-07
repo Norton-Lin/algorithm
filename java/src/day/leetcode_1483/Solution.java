@@ -1,3 +1,4 @@
+package day.leetcode_1483;
 /*
  * @lc app=leetcode.cn id=1483 lang=java
  *
@@ -6,12 +7,7 @@
 
 // @lc code=start
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 class TreeAncestor {
     static final int LOG = 16;
     int[][] ancestors;
