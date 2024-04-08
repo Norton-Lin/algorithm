@@ -1,4 +1,4 @@
-package test_345;
+package test.test_345;
 
 import java.util.ArrayList;
 import java.util.Arrays;

@@ -1,4 +1,4 @@
-package test05_02;
+package test.test05_02;
 
 class Solution {
     public String printBin(double num) {

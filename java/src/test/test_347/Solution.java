@@ -1,4 +1,4 @@
-package test_347;
+package test.test_347;
 
 import java.util.HashSet;
 
