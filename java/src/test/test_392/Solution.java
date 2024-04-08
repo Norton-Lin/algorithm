@@ -69,62 +69,47 @@ public class Solution {
         return ans;
     }
     //带权图
-    //最后的权取决于途径的最低权
-    //无环路径，取决于最低权，找连通图里的最小
-    //有环路径，走有最低权的,然后绕一圈
-    //带环的直接与
-    //找连通图里的最小
+    //最后的权取决于整个连通图的dfs &
     public int[] minimumCost(int n, int[][] edges, int[][] query) {
-        int[] ans = new int[query.length];
-        int[] record = new int[n];
-        int[][] map = new int[n][n];
-        List<Integer> list = new ArrayList<>();
+        List<int[]>[] map = new List[n];//边图, 一个点一个权
+        Arrays.setAll(map, i->new ArrayList<>());
+        for(int[] e: edges){
+            map[e[0]].add(new int[]{e[1],e[2]});
+            map[e[1]].add(new int[]{e[0],e[2]});
+        }
+        int[] record = new int[n];//记录点所在连通图编号
         Arrays.fill(record, -1);
-        int cur = 0;
-        for(int i = 0;i<n;++i)
-            Arrays.fill(map[i],-1);
-        for(int[] edge:edges){
-            if(map[edge[0]][edge[1]] == 0){
-                map[edge[0]][edge[1]] = edge[2];
-                map[edge[1]][edge[0]] = edge[2];
+        List<Integer> curAnd = new ArrayList<>();//记录每个连通图与值
+        for(int i = 0;i<n;++i){
+            if(record[i]==-1)
+                curAnd.add(dfs(i,curAnd.size(),record,map));
+        }
+        int[] ans = new int[query.length];
+        for(int i = 0;i<ans.length;++i){
+            if(record[query[i][0]]!=record[query[i][1]])
+                ans[i] = -1;
+            else{
+                ans[i] = curAnd.get(record[query[i][0]]);
+                if(query[i][0] == query[i][1])
+                    ans[i] = 0;
             }
                 
-            else{
-                map[edge[0]][edge[1]] = map[edge[0]][edge[1]]&edge[2];
-                map[edge[1]][edge[0]] = map[edge[1]][edge[0]]&edge[2];
-            }       
-        }
-        for(int i = 0;i<n;++i){
-            if(record[i]!=-1)//已存在于连通图中
-                continue;
-            record[i] = list.size();
-            cur = dfs(i,map, record, list.size(), n);
-            list.add(cur);
-        }
-        for(int i = 0;i<query.length;++i){
-            if(record[query[i][0]] == record[query[i][1]])
-                ans[i] = list.get(record[query[i][0]]);
-            else
-                ans[i] = -1;
         }
         return ans;
     }
-    public int dfs(int index,int[][] map, int[] record, int num,int n){
-        int ans = 100000;
-        for(int i = 0;i<n;++i){
-            if(map[index][i]!=-1){//有路径
-                if(record[i]==-1){//不在连通图中
-                    record[i] = num;
-                    ans = Math.min(map[index][i],ans&map[index][i],);
-                    int res = dfs(i,map,record,num,n);
-                    ans = Math.min(res,ans&ans);
-                }
-            } 
+    public int dfs(int index, int cur, int[] record, List<int[]>[] map){
+        int res = -1;
+        record[index] = cur;
+        for(int arr[]: map[index]){
+            res &= arr[1];
+            if(record[arr[0]]!=-1)
+                continue;
+            res &= dfs(arr[0],cur,record,map);
         }
-        return ans;
+        return res;
     }
     public static void main(String[] args) {
         Solution s = new Solution();
-        s.minimumCost(3,new int[][]{{1,0,4},{0,2,5},{0,2,3},{0,2,14},{0,2,12},{2,0,14},{0,2,4}},new int[][]{{2,1}});
+        s.minimumCost(3,new int[][]{{0,2,7},{0,1,15},{1,2,6},{1,2,1}},new int[][]{{2,1}});
     }
 }
