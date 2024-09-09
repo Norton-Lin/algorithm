@@ -7,7 +7,7 @@ package main
  */
 
 // @lc code=start
-func maxConsecutiveAnswers(answerKey string, k int) int {
+func MaxConsecutiveAnswers(answerKey string, k int) int {
 	return max(maxConsecutiveChar(answerKey, k, 'T'), maxConsecutiveChar(answerKey, k, 'F'))
 }
 
