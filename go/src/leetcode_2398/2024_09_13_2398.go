@@ -17,7 +17,7 @@ package main
 // 保证窗口大小，然后后移
 // 维护窗口内charge最大值
 // 区间值为 max + （right-left+1）*（sum/（right-left） + num）
-func maximumRobots(chargeTimes []int, runningCosts []int, budget int64) int {
+func MaximumRobots(chargeTimes []int, runningCosts []int, budget int64) int {
 	ans := 0
 	q := []int{}
 	var sum int64 = 0
