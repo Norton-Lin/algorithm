@@ -23,7 +23,7 @@ package main
 //  滑动窗口
 //  记 第二条线段起点是 i ,第一条线段能覆盖的奖品长度是record[i]
 //  record[i+1] = max(record[i] + 1, i-left+1) 这里的left指第一条线段的起点
-func maximizeWin(prizePositions []int, k int) int {
+func MaximizeWin(prizePositions []int, k int) int {
 	ans := 0
 	n := len(prizePositions)
 	//窗口足够覆盖
