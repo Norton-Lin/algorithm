@@ -9,7 +9,7 @@ package main
 // @lc code=start
 // 优质数对中，nums1必然可以被k整除
 // 记录倍数还是更快 比遍历快
-func numberOfPairs(nums1 []int, nums2 []int, k int) int64 {
+func NumberOfPairs(nums1 []int, nums2 []int, k int) int64 {
 	count1 := make(map[int]int64)
 	count2 := make(map[int]int64)
 	ans := int64(0)
