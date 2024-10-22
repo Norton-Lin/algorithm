@@ -7,11 +7,22 @@ package main
  */
 
 // @lc code=start
-func minOperations(nums []int) int {
+// 贪心即可
+func MinOperations(nums []int) int {
 	n := len(nums)
-	for i := 0; i < n; i++ {
-
+	ans := 0
+	for i := 0; i < n-2; i++ {
+		if nums[i] == 0 {
+			nums[i] = 1
+			nums[i+1] = (nums[i+1] + 1) % 2
+			nums[i+2] = (nums[i+2] + 1) % 2
+			ans++
+		}
 	}
+	if nums[n-1] == 0 || nums[n-2] == 0 {
+		ans = -1
+	}
+	return ans
 }
 
 // @lc code=end
