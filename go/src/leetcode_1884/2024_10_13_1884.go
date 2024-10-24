@@ -9,7 +9,7 @@ import "math"
  */
 
 // @lc code=start
-//找第一个k 2*k(k+1) > n
+// 找第一个k 2*k(k+1) > n
 func TwoEggDrop(n int) int {
 	ans := int(math.Sqrt(float64(n * 2)))
 	for ans*(ans+1)/2 < n {
