@@ -16,17 +16,27 @@ func resultsArray(nums []int, k int) []int {
 	n := len(nums)
 	ans := make([]int, n-k+1)
 	i := 1
-	for ;i<k;i++{
-		if nums[i]!=nums[i-1]+1{
+	for ; i < k; i++ {
+		if nums[i] != nums[i-1]+1 {
 			ans[0] = -1
-			break;
+			break
 		}
 	}
 	if ans[0] != -1 {
 		ans[0] = nums[i-1]
 	}
-	for i < n ;i++{
-		
+	for i = k; i < n; i++ {
+		ans[i-k+1] = -1
+		j := i - 1
+		for ; j > i-k; j-- {
+			//fmt.Println(nums[j],nums[j+1])
+			if nums[j+1] != nums[j]+1 {
+				break
+			}
+		}
+		if j == i-k {
+			ans[i-k+1] = nums[i]
+		}
 	}
 	return ans
 }
