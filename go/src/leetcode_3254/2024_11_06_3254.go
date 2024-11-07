@@ -12,7 +12,7 @@ package main
 // if dp[i-1] != -1 && nums[i+k] == nums[i-1]+k+1
 // dp[i] = do[i-1]+1
 // else dp[i] = -1
-func resultsArray(nums []int, k int) []int {
+func ResultsArray(nums []int, k int) []int {
 	n := len(nums)
 	ans := make([]int, n-k+1)
 	i := 1
