@@ -7,7 +7,7 @@ package main
  */
 
 // @lc code=start
-func minFlips(grid [][]int) int {
+func MinFlips(grid [][]int) int {
 	ans1, ans2 := 0, 0
 	n, m := len(grid), len(grid[0])
 	for i := 0; i < n; i++ {
