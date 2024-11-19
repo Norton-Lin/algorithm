@@ -7,8 +7,8 @@ package main
  */
 
 // @lc code=start
-// 每次都深搜
 // 广搜不能深搜
+// 可以dp
 func ShortestDistanceAfterQueries(n int, queries [][]int) []int {
 	neighbors := make([][]int, n)
 	for i := 0; i < n-1; i++ {
@@ -28,10 +28,11 @@ func bfs(n int, neighbors [][]int) int {
 		dist[i] = -1
 	}
 	q := []int{0}
-	for len(q) > 0 {
+	for len(q) > 0 && dist[n-1] == -1 {
 		x := q[0]
 		q = q[1:]
 		for _, y := range neighbors[x] {
+			// 已经得到最短路径
 			if dist[y] >= 0 {
 				continue
 			}
