@@ -7,7 +7,7 @@ package main
  */
 
 // @lc code=start
-func winningPlayerCount(n int, pick [][]int) int {
+func WinningPlayerCount(n int, pick [][]int) int {
 	records := make([][]int, n)
 	ans := 0
 	for i := 0; i < n; i++ {
@@ -17,9 +17,13 @@ func winningPlayerCount(n int, pick [][]int) int {
 		records[nums[0]][nums[1]]++
 	}
 	for i, record := range records {
-		if record > i {
-			ans++
+		for _, value := range record {
+			if value > i {
+				ans++
+				break
+			}
 		}
+
 	}
 	return ans
 }
