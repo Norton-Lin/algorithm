@@ -8,7 +8,7 @@ package main
 
 // @lc code=start
 // 注意小数问题
-func findSpecialInteger(arr []int) int {
+func FindSpecialInteger(arr []int) int {
 	n := len(arr)
 	record := float64(n) / 4
 	cur := 1
