@@ -16,62 +16,71 @@ package main
 // 一次遍历，维护四个记录变量
 func MaxDistance(arrays [][]int) int {
 	ans := 0
-	recordMin := make([][]int, 2)
-	recordMax := make([][]int, 2)
-	//记录两个最大值和最小值
-	for i := 0; i < 2; i++ {
-		recordMin[i] = make([]int, 2)
-		recordMax[i] = make([]int, 2)
-	}
-	if arrays[0][0] <= arrays[1][0] {
-		recordMin[0][0] = arrays[0][0]
-		recordMin[0][1] = 0
-		recordMin[1][0] = arrays[1][0]
-		recordMin[1][1] = 1
-	} else {
-		recordMin[1][0] = arrays[0][0]
-		recordMin[1][1] = 0
-		recordMin[0][0] = arrays[1][0]
-		recordMin[0][1] = 1
-	}
-	if arrays[0][len(arrays[0])-1] >= arrays[1][len(arrays[1])-1] {
-		recordMax[0][0] = arrays[0][len(arrays[0])-1]
-		recordMax[0][1] = 0
-		recordMax[1][0] = arrays[1][len(arrays[1])-1]
-		recordMax[1][1] = 1
-	} else {
-		recordMax[1][0] = arrays[0][len(arrays[0])-1]
-		recordMax[1][1] = 0
-		recordMax[0][0] = arrays[1][len(arrays[1])-1]
-		recordMax[0][1] = 1
-	}
+	// recordMin := make([][]int, 2)
+	// recordMax := make([][]int, 2)
+	// //记录两个最大值和最小值
+	// for i := 0; i < 2; i++ {
+	// 	recordMin[i] = make([]int, 2)
+	// 	recordMax[i] = make([]int, 2)
+	// }
+	// if arrays[0][0] <= arrays[1][0] {
+	// 	recordMin[0][0] = arrays[0][0]
+	// 	recordMin[0][1] = 0
+	// 	recordMin[1][0] = arrays[1][0]
+	// 	recordMin[1][1] = 1
+	// } else {
+	// 	recordMin[1][0] = arrays[0][0]
+	// 	recordMin[1][1] = 0
+	// 	recordMin[0][0] = arrays[1][0]
+	// 	recordMin[0][1] = 1
+	// }
+	// if arrays[0][len(arrays[0])-1] >= arrays[1][len(arrays[1])-1] {
+	// 	recordMax[0][0] = arrays[0][len(arrays[0])-1]
+	// 	recordMax[0][1] = 0
+	// 	recordMax[1][0] = arrays[1][len(arrays[1])-1]
+	// 	recordMax[1][1] = 1
+	// } else {
+	// 	recordMax[1][0] = arrays[0][len(arrays[0])-1]
+	// 	recordMax[1][1] = 0
+	// 	recordMax[0][0] = arrays[1][len(arrays[1])-1]
+	// 	recordMax[0][1] = 1
+	// }
 
-	for index, arr := range arrays[2:] {
+	// for index, arr := range arrays[2:] {
+	// 	n := len(arr)
+	// 	if arr[0] <= recordMin[0][0] {
+	// 		recordMin[1][0] = recordMin[0][0]
+	// 		recordMin[1][1] = recordMin[0][1]
+	// 		recordMin[0][0] = arr[0]
+	// 		recordMin[0][1] = index + 2
+	// 	} else if arr[0] <= recordMin[1][0] {
+	// 		recordMin[1][0] = arr[0]
+	// 		recordMin[1][1] = index + 2
+	// 	}
+	// 	if arr[n-1] >= recordMax[0][0] {
+	// 		recordMax[1][0] = recordMax[0][0]
+	// 		recordMax[1][1] = recordMax[0][1]
+	// 		recordMax[0][0] = arr[n-1]
+	// 		recordMax[0][1] = index + 2
+	// 	} else if arr[n-1] >= recordMax[1][0] {
+	// 		recordMax[1][0] = arr[n-1]
+	// 		recordMax[1][1] = index + 2
+	// 	}
+	// }
+	// //fmt.Println(recordMax,recordMin)
+	// if recordMax[0][1] != recordMin[0][1] {
+	// 	ans = recordMax[0][0] - recordMin[0][0]
+	// } else {
+	// 	ans = max(recordMax[1][0]-recordMin[0][0], recordMax[0][0]-recordMin[1][0])
+	// }
+	//优化写法
+	a, b := arrays[0][0], arrays[0][len(arrays[0])-1]
+	for _, arr := range arrays[1:] {
 		n := len(arr)
-		if arr[0] <= recordMin[0][0] {
-			recordMin[1][0] = recordMin[0][0]
-			recordMin[1][1] = recordMin[0][1]
-			recordMin[0][0] = arr[0]
-			recordMin[0][1] = index + 2
-		} else if arr[0] <= recordMin[1][0] {
-			recordMin[1][0] = arr[0]
-			recordMin[1][1] = index + 2
-		}
-		if arr[n-1] >= recordMax[0][0] {
-			recordMax[1][0] = recordMax[0][0]
-			recordMax[1][1] = recordMax[0][1]
-			recordMax[0][0] = arr[n-1]
-			recordMax[0][1] = index + 2
-		} else if arr[n-1] >= recordMax[1][0] {
-			recordMax[1][0] = arr[n-1]
-			recordMax[1][1] = index + 2
-		}
-	}
-	//fmt.Println(recordMax,recordMin)
-	if recordMax[0][1] != recordMin[0][1] {
-		ans = recordMax[0][0] - recordMin[0][0]
-	} else {
-		ans = max(recordMax[1][0]-recordMin[0][0], recordMax[0][0]-recordMin[1][0])
+		cur := max(arr[n-1]-a, b-arr[0])
+		ans = max(cur, ans)
+		a = min(arr[0], a)
+		b = max(arr[n-1], b)
 	}
 	return ans
 }
