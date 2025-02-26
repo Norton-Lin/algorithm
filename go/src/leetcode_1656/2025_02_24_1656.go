@@ -17,13 +17,13 @@ func Constructor(n int) OrderedStream {
 	return OrderedStream{arr, 1}
 }
 
-func (this *OrderedStream) Insert(idKey int, value string) []string {
-	this.arr[idKey] = value
+func (t *OrderedStream) Insert(idKey int, value string) []string {
+	t.arr[idKey] = value
 	ans := make([]string, 0)
 	//fmt.Println(this.arr,this.ptr,idKey)
-	if idKey == this.ptr {
-		for ; this.ptr < len(this.arr) && this.arr[this.ptr] != ""; this.ptr++ {
-			ans = append(ans, this.arr[this.ptr])
+	if idKey == t.ptr {
+		for ; t.ptr < len(t.arr) && t.arr[t.ptr] != ""; t.ptr++ {
+			ans = append(ans, t.arr[t.ptr])
 		}
 	}
 	return ans
