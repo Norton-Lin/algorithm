@@ -35,19 +35,19 @@ func Constructor(foods []string, cuisines []string, ratings []int) FoodRatings {
 	return FoodRatings{foodToCuisine, foodToRating, cuisineToFood}
 }
 
-func (this *FoodRatings) ChangeRating(food string, newRating int) {
-	cuisine := this.foodToCuisine[food]
-	this.foodToRating[food] = newRating
+func (t *FoodRatings) ChangeRating(food string, newRating int) {
+	cuisine := t.foodToCuisine[food]
+	t.foodToRating[food] = newRating
 
 	// 更新堆中的评分
-	heap.Push(this.cuisineToFood[cuisine], &Food{food, newRating})
+	heap.Push(t.cuisineToFood[cuisine], &Food{food, newRating})
 }
 
-func (this *FoodRatings) HighestRated(cuisine string) string {
-	maxHeap := this.cuisineToFood[cuisine]
+func (t *FoodRatings) HighestRated(cuisine string) string {
+	maxHeap := t.cuisineToFood[cuisine]
 	for {
 		top := heap.Pop(maxHeap).(*Food)
-		if this.foodToRating[top.name] == top.rating {
+		if t.foodToRating[top.name] == top.rating {
 			heap.Push(maxHeap, top)
 			return top.name
 		}
