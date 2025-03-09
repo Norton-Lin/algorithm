@@ -14,7 +14,6 @@ func maxScoreSightseeingPair(values []int) int {
 	for i := 2; i < n; i++ {
 		cur = max(cur+values[i]-values[i-1]-1, values[i]+values[i-1]-1)
 		ans = max(cur, ans)
-
 	}
 	return ans
 }
