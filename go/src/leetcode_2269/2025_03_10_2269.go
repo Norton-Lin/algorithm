@@ -12,7 +12,7 @@ package main
 func DivisorSubstrings(num int, k int) int {
 	ans := 0
 	mod := 1
-	for i := 0; i < k; i++ {
+	for range k {
 		mod *= 10
 	}
 	value := num
