@@ -1,7 +1,7 @@
 package contest441
 
 // 数据规模，计算可能性
-func minZeroArray(nums []int, queries [][]int) int {
+func MinZeroArray(nums []int, queries [][]int) int {
 	n := len(nums)
 	k := len(queries)
 	records := make([]int, n)

@@ -7,7 +7,7 @@ package main
  */
 
 // @lc code=start
-func largestVariance(s string) int {
+func LargestVariance(s string) int {
 	return 0
 }
 
