@@ -8,7 +8,7 @@ package main
 
 // @lc code=start
 //未匹配到的右括号需要交换
-func minSwaps(s string) int {
+func MinSwaps(s string) int {
 	//ans := 0
 	left, right := 0, 0
 	for _, c := range s {
