@@ -1,6 +1,6 @@
 module main
 
-go 1.22.2
+go 1.23.8
 
 require (
 	github.com/emirpasic/gods v1.18.1
