@@ -7,7 +7,7 @@ package main
  */
 
 // @lc code=start
-func countPairs(nums []int, k int) int {
+func CountPairs(nums []int, k int) int {
 	records := make(map[int][]int)
 	ans := 0
 	for i, num := range nums {
