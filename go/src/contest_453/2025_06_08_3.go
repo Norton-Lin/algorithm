@@ -56,7 +56,7 @@ func (p *PriorityQueue2) Push(x interface{}) {
 // dp?
 func countPartitions(nums []int, k int) int {
 	n := len(nums)
-	mod := 1_000_000_000 + 7
+	//mod := 1_000_000_000 + 7
 	dp := make([]int, n+1)
 	records := make([]int, n+1)
 	maxQueue := &PriorityQueue1{}
@@ -66,7 +66,7 @@ func countPartitions(nums []int, k int) int {
 	records[0] = dp[0]
 	for i := 1; i <= n; i++ {
 		dp[i] = dp[i-1]
-		
+
 		dp[i] = records[i-1] - records[pre]
 		records[i] = dp[i] + records[i-1]
 		heap.Push(minQueue, nums[i-1])
