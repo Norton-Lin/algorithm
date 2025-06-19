@@ -46,15 +46,16 @@ func SnakesAndLadders(board [][]int) int {
 	}
 	return ans
 }
-func getNum(i, j, n int) int {
-	ans := 0
-	if i%2 == n%2 {
-		ans = (n-i)*n - j
-	} else {
-		ans = (n-i-1)*n + j + 1
-	}
-	return ans
-}
+
+//	func getNum(i, j, n int) int {
+//		ans := 0
+//		if i%2 == n%2 {
+//			ans = (n-i)*n - j
+//		} else {
+//			ans = (n-i-1)*n + j + 1
+//		}
+//		return ans
+//	}
 func getLocation(num, n int) (int, int) {
 	i := n - (num-1)/n - 1
 	j := 0
