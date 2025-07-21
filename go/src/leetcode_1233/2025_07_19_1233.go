@@ -12,7 +12,7 @@ import (
  */
 
 // @lc code=start
-func removeSubfolders(folder []string) []string {
+func RemoveSubfolders(folder []string) []string {
 	sort.Strings(folder)
 	ans := make([]string, 0)
 	cur := folder[0]
