@@ -8,7 +8,8 @@ func AnswerString(word string, numFriends int) string {
 	if numFriends == 1 {
 		return word
 	}
-	n := len(word)
+
+		n := len(word)
 	l := n - numFriends + 1 //可以获得的最长字符串，即为答案字符串的长度,但不一定是最长
 	c := byte('a')
 	ans := word[:l]
