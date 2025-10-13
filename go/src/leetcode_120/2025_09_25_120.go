@@ -9,7 +9,7 @@ import "math"
  */
 
 // @lc code=start
-func minimumTotal(triangle [][]int) int {
+func MinimumTotal(triangle [][]int) int {
 	n := len(triangle)
 	cur := make([]int, n)
 	pre := make([]int, n)
